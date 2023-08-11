@@ -6,7 +6,7 @@ cd "ms-$1-default"
 mkdir "source"
 npm init -y
 cd "source"
-mkdir constants controllers services errors routes validations
+mkdir constants controllers services errors routes validations interfaces responses repository
 cd ..
 
 echo "import express from 'express';
@@ -24,6 +24,7 @@ cp ./.env ../"ms-$1-default"/
 cp -r ./default_files/routes/ ../"ms-$1-default"/source/
 cp ./package.json ../"ms-$1-default"/
 cd /home/ryladant/boilerplate/microservico/ms-$1-default/
+cd source
 npm install
 npx tsc
 
